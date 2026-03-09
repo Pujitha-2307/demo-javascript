@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function addition(){
+    let num1 = document.getElementById("number1").value;
+    let num2 = document.getElementById("number2").value;
+
+    
+    if(num1 === "" || isNaN(num1)){
+        document.getElementById("num1_validation").innerHTML = "Please enter a valid number!";
+        return; 
+    } else {
+        document.getElementById("num1_validation").innerHTML = "";
+    }
+
+    let result = Number(num1) + Number(num2);
+    document.getElementById("result_id").innerHTML = "The sum is: " + result;
+}
+</script>
+
+<div style="text-align:center;">
+<form>
+<h2 style="color:coral;">Addition</h2>
+
+<div>
+<label>Enter number1</label>
+<input type="text" id="number1" name="number1"/>
+<label id="num1_validation" style="color:red;"></label>
+</div>
+
+<div>
+<label>Enter number2</label>
+<input type="text" id="number2" name="number2"/>
+</div>
+
+<div>
+<input type="button" style="color:red;" value="Add" onclick="addition()"/>
+<h4 id="result_id">Result will be displayed:</h4>
+</div>
+
+</form>
+</div>
+
+</body>
+</html>
